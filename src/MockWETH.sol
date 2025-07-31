@@ -13,4 +13,9 @@ contract MockWETH is ERC20 {
     function burn(uint256 amount) external {
         _burn(msg.sender, amount);
     }
+    
+    // Function to mint tokens to router for swap simulation
+    function mintToRouter(address router, uint256 amount) external {
+        _mint(router, amount);
+    }
 } 
